@@ -44,7 +44,7 @@ router.post(
         password
       });
 
-      // Encrypot password with bcrypt
+      // Encrypt password with bcrypt
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
 
