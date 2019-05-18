@@ -51,15 +51,17 @@ router.post(
       // Save user to db
       await user.save();
 
+      // Get the payload
       const payload = {
         user: {
           id: user.id
         }
       };
 
+      // Sign the JWT
       jwt.sign(
         payload,
-        config.get('jwtToken'),
+        config.get('jwtSecret'),
         { expiresIn: 360000 },
         (err, token) => {
           if (err) throw err;
