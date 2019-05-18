@@ -19,8 +19,7 @@ const ProfileSchema = new mongoose.Schema({
     required: true
   },
   favorites: {
-    type: [String],
-    required: true
+    type: [String]
   },
   bio: {
     type: String
