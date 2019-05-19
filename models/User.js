@@ -15,7 +15,9 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   avatar: {
-    type: String
+    type: String,
+    default:
+      'https://minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg'
   },
   date: {
     type: Date,
