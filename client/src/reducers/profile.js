@@ -4,7 +4,7 @@ const initialState = {
   profile: null,
   profiles: [],
   loading: true,
-  errors: {}
+  error: {}
 };
 
 export default function(state = initialState, action) {
